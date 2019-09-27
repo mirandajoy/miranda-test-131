@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Passer au contenu",
-      "close_modal": "Fermer (Échap)",
+      "close_modal": "Fermer",
       "link_messages": {
         "new_window": "S'ouvre dans une nouvelle fenêtre.",
         "external": "Ouvre un site externe.",
         "new_window_and_external": "Ouvre un site externe dans une nouvelle fenêtre."
       },
       "refresh_page": "le choix d'une sélection entraîne une actualisation complète de la page",
-      "selection_help": "appuyez sur la touche espace puis sur les touches fléchées pour faire une sélection"
+      "selection_help": "appuyez sur la touche espace puis sur les touches fléchées pour faire une sélection",
+      "unit_price_separator": "par",
+      "error": "Erreur"
     },
     "meta": {
       "tags": "Balises \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Veuillez essayer un terme de recherche différent ou revenir à la <a href=\"\/\">page d'accueil<\/a>.",
+      "no_results_html": "Veuillez essayer un terme de recherche différent ou revenir à la <a href=\"{{ link }}\">page d'accueil<\/a>.",
       "empty_search_message": "Le champ de recherche ne peut pas être vide",
       "results_with_count": {
         "one": "{{ count }} résultat pour \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Emplacement"
     },
     "video": {
-      "play": "Lire la vidéo",
-      "pause": "Pause vidéo",
-      "resume": "Reprendre la vidéo",
-      "close": "Fermer la vidéo"
+      "play": "Lire la vidéo {{ video_title }}",
+      "pause": "Suspendre la vidéo {{ video_title }}",
+      "resume": "Reprendre la vidéo {{ video_title }}",
+      "close": "Fermer la vidéo {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,7 +141,8 @@
     "general": {
       "title": "Votre panier",
       "note": "Ajouter une note à votre commande",
-      "remove": "Retirer",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> supprimé(s) de votre panier.",
+      "remove": "Supprimer",
       "subtotal": "Sous-total",
       "savings": "Vous économisez",
       "taxes_and_shipping_at_checkout": "Taxes et frais de port calculés à la caisse",
@@ -150,15 +153,31 @@
       "checkout": "Passer à la caisse",
       "empty": "Votre panier est vide.",
       "cookies_required": "Activer les cookies pour pouvoir utiliser le panier",
-      "edit": "Modifier",
-      "cancel": "Annuler",
-      "continue_shopping": "Poursuivre vos achats"
+      "continue_shopping": "Poursuivre vos achats",
+      "cart_error": "Une erreur est survenue lors de l’actualisation de votre carte. Essayez de nouveau s’il vous plaît."
     },
     "label": {
+      "discounted_total": "Total après réduction",
       "product": "Produit",
       "price": "Prix",
+      "price_column": "Voir les détails de la réduction dans la colonne Prix.",
+      "product_details": "Détails des produits",
       "quantity": "Quantité",
-      "total": "Total"
+      "qty": "Qté",
+      "regular_total": "Total avant réduction",
+      "remove": "Supprimer {{ product }}",
+      "total": "Total",
+      "update": "Mettre à jour"
+    },
+    "popup": {
+      "added_to_cart": "Ajouté au panier à l'instant",
+      "cart_count": {
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles"
+      },
+      "product_details": "Détails des produits",
+      "quantity": "Qté",
+      "quantity_label": "Quantité : {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} produits"
       },
       "collection_label": "Collection"
+    },
+    "catalog": {
+      "title": "Catalogue"
     },
     "sorting": {
       "title": "Trier par"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Page d’accueil"
+    },
     "onboarding": {
       "product_title": "Le nom de votre produit",
       "product_description": "Ce champ est utilisé pour décrire les détails de votre produit. Décrivez l'apparence, la présentation et le style de votre produit à vos clients. Ajoutez des détails sur la couleur, les matériaux utilisés, la taille et la provenance.",
@@ -337,11 +362,14 @@
       "sale_price": "Prix réduit",
       "quantity": "Quantité",
       "add_to_cart": "Ajouter au panier",
+      "loader_label": "Ajout d'un produit à votre panier",
       "back_to_collection": "Retour à {{ title }}",
       "vendor": "Distributeur",
       "quantity_minimum_message": "La quantité doit être supérieure ou égale à 1",
       "include_taxes": "Taxes incluses.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition<\/a> calculés lors du passage à la caisse."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition<\/a> calculés lors du passage à la caisse.",
+      "unit_price_label": "Prix unitaire",
+      "view_cart": "Voir le panier"
     }
   },
   "gift_cards": {

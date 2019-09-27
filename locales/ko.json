@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "콘텐츠로 건너뛰기",
-      "close_modal": "닫기 (esc)",
+      "close_modal": "닫기",
       "link_messages": {
         "new_window": "새 창에서 열기",
         "external": "외부 웹사이트 열기",
         "new_window_and_external": "새 창에서 외부 웹사이트 열기"
       },
       "refresh_page": "선택을 누르면 전체 페이지가 새로 고침됩니다.",
-      "selection_help": "스페이스 키를 누른 다음 화살표를 눌러 선택합니다."
+      "selection_help": "스페이스 키를 누른 다음 화살표를 눌러 선택합니다.",
+      "unit_price_separator": "당",
+      "error": "오류"
     },
     "meta": {
       "tags": "태그 \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "다른 검색 용어를 사용하거나 <a href=\"\/\">홈페이지<\/a> 로 돌아가십시오.",
+      "no_results_html": "다른 검색 용어를 사용하거나 <a href=\"{{ link }}\">홈페이지<\/a> 로 돌아가십시오.",
       "empty_search_message": "검색 필드를 비워 둘 수 없습니다.",
       "results_with_count": {
         "one": "\"{{ terms }}\"에 대한 {{ count }}에  검색 결과",
@@ -101,10 +103,10 @@
       "section_heading": "위치"
     },
     "video": {
-      "play": "동영상 재생",
-      "pause": "동영상 일시 중지",
-      "resume": "동영상 다시 재생",
-      "close": "동영상 닫기"
+      "play": "{{ video_title }} 동영상 재생",
+      "pause": "{{ video_title }} 동영상 일시 중지",
+      "resume": "{{ video_title }} 동영상 다시 재생",
+      "close": "{{ video_title }} 동영상 닫기"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "장바구니",
       "note": "주문에 메모 추가",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span>이 카드에서 제거되었습니다.",
       "remove": "제거",
       "subtotal": "소계",
       "savings": "저장 중입니다.",
@@ -150,15 +153,31 @@
       "checkout": "결제",
       "empty": "현재 카트가 비어 있습니다.",
       "cookies_required": "쿠키를 사용하여 쇼핑 카드 사용 ",
-      "edit": "편집",
-      "cancel": "취소",
-      "continue_shopping": "쇼핑 계속하기"
+      "continue_shopping": "쇼핑 계속하기",
+      "cart_error": "카트를 업데이트하는 중 오류가 발생했습니다. 다시 시도하십시오."
     },
     "label": {
+      "discounted_total": "총 할인",
       "product": "제품",
       "price": "가격",
+      "price_column": "할인 세부 정보를 가격 컬럼에서 확인합니다.",
+      "product_details": "제품 세부 정보",
       "quantity": "수량",
-      "total": "총계"
+      "qty": "수량",
+      "regular_total": "총 정가",
+      "remove": "{{ product }} 제거",
+      "total": "총계",
+      "update": "업데이트"
+    },
+    "popup": {
+      "added_to_cart": "카트에 추가한 품목",
+      "cart_count": {
+        "one": "{{ count }}개 품목",
+        "other": "{{ count }}개 품목"
+      },
+      "product_details": "제품 세부 정보",
+      "quantity": "수량",
+      "quantity_label": "수량: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }}개 제품"
       },
       "collection_label": "컬렉션"
+    },
+    "catalog": {
+      "title": "카탈로그"
     },
     "sorting": {
       "title": "정렬 기준"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "홈페이지"
+    },
     "onboarding": {
       "product_title": "제품명",
       "product_description": "제품 세부 정보를 설명하는데 사용되는 영역입니다. 고객에게 제품의 외형, 촉감, 스타일에 대해 설명하십시오. 색상, 사용된 재료, 사이즈 및 제조 장소에 대한 세부 정보를 추가하십시오.",
@@ -337,11 +362,14 @@
       "sale_price": "판매 가격",
       "quantity": "수량",
       "add_to_cart": "카트에 추가",
+      "loader_label": "카트에 제품 추가",
       "back_to_collection": "{{ title }} 로 돌아가기",
       "vendor": "공급업체",
       "quantity_minimum_message": "수량이 1개 이상이어야 합니다.",
       "include_taxes": "세금이 포함됨",
-      "shipping_policy_html": "결제 시 <a href=\"{{ link }}\">배송료<\/a> 가 계산됨"
+      "shipping_policy_html": "결제 시 <a href=\"{{ link }}\">배송료<\/a> 가 계산됨",
+      "unit_price_label": "단가",
+      "view_cart": "카트 보기"
     }
   },
   "gift_cards": {

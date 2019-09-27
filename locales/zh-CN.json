@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "跳到内容",
-      "close_modal": "关闭 (esc)",
+      "close_modal": "关闭",
       "link_messages": {
         "new_window": "在新窗口中打开。",
         "external": "打开外部网站。",
         "new_window_and_external": "在新窗口中打开外部网站。"
       },
       "refresh_page": "选择选项会使整页刷新",
-      "selection_help": "依次按空格键和箭头键来进行选择"
+      "selection_help": "依次按空格键和箭头键来进行选择",
+      "unit_price_separator": "单价",
+      "error": "错误"
     },
     "meta": {
       "tags": "标记为“{{ tags }}”",
@@ -40,7 +42,7 @@
     "social": {
       "share_on_facebook": "共享",
       "share_on_twitter": "发推文",
-      "share_on_pinterest": "收藏它",
+      "share_on_pinterest": "收藏",
       "alt_text": {
         "share_on_facebook": "在 Facebook 上共享",
         "share_on_twitter": "在 Twitter 上发推文",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "请尝试其他搜索词或返回<a href=\"\/\">主页<\/a>。",
+      "no_results_html": "请尝试其他搜索词或返回<a href=\"{{ link }}\">主页<\/a>。",
       "empty_search_message": "搜索字段不能为空",
       "results_with_count": {
         "one": "“{{ terms }}”的 {{ count }} 个结果",
@@ -101,10 +103,10 @@
       "section_heading": "位置"
     },
     "video": {
-      "play": "播放视频",
-      "pause": "暂停视频",
-      "resume": "续播视频",
-      "close": "关闭视频"
+      "play": "播放 {{ video_title }} 视频",
+      "pause": "暂停 {{ video_title }} 视频",
+      "resume": "恢复播放 {{ video_title }} 视频",
+      "close": "关闭 {{ video_title }} 视频"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "您的购物车",
       "note": "为订单添加备注",
+      "removed_item_html": "已从您的购物车删除了 <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span>。",
       "remove": "删除",
       "subtotal": "小计",
       "savings": "您正在保存",
@@ -150,15 +153,31 @@
       "checkout": "结账",
       "empty": "您的购物车当前是空的。",
       "cookies_required": "启用 Cookie 以使用购物车",
-      "edit": "编辑",
-      "cancel": "取消",
-      "continue_shopping": "继续购物"
+      "continue_shopping": "继续购物",
+      "cart_error": "更新购物车时出错。请重试。"
     },
     "label": {
+      "discounted_total": "折扣总数",
       "product": "产品",
       "price": "价格",
+      "price_column": "有关折扣的详细信息，请参阅价格列。",
+      "product_details": "产品详细信息",
       "quantity": "数量",
-      "total": "总计"
+      "qty": "数量",
+      "regular_total": "常规总额",
+      "remove": "删除 {{ product }}",
+      "total": "总计",
+      "update": "更新"
+    },
+    "popup": {
+      "added_to_cart": "已添加到购物车",
+      "cart_count": {
+        "one": "{{ count }} 件产品",
+        "other": "{{ count }} 件商品"
+      },
+      "product_details": "产品详细信息",
+      "quantity": "数量",
+      "quantity_label": "数量：{{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} 个产品"
       },
       "collection_label": "收藏"
+    },
+    "catalog": {
+      "title": "目录"
     },
     "sorting": {
       "title": "排序方式"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "主页"
+    },
     "onboarding": {
       "product_title": "您的产品名称",
       "product_description": "此区域用于描述产品的详细信息。向客户介绍产品的外观、体验和风格。添加有关颜色、使用材料、尺寸以及产地的详细信息。",
@@ -320,7 +345,7 @@
     },
     "customer": {
       "account": "帐户",
-      "log_out": "注销",
+      "log_out": "退出",
       "log_in": "登录",
       "create_account": "创建帐户"
     },
@@ -337,11 +362,14 @@
       "sale_price": "销售价格",
       "quantity": "数量",
       "add_to_cart": "添加到购物车",
+      "loader_label": "将产品添加到您的购物车",
       "back_to_collection": "返回到 {{ title }}",
       "vendor": "供应商",
       "quantity_minimum_message": "数量必须大于或等于 1",
       "include_taxes": "税金（包含）。",
-      "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费<\/a>。"
+      "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费<\/a>。",
+      "unit_price_label": "单价",
+      "view_cart": "查看购物车"
     }
   },
   "gift_cards": {

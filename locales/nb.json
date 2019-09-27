@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Gå videre til innholdet",
-      "close_modal": "Lukk (esc)",
+      "close_modal": "Lukk",
       "link_messages": {
         "new_window": "Åpner i et nytt vindu.",
         "external": "Åpner eksternt nettsted.",
         "new_window_and_external": "Åpner eksternt nettsted i et nytt vindu."
       },
       "refresh_page": "å velge et utvalg fører til en full oppdatering av siden",
-      "selection_help": "trykk på mellomromstasten og deretter på piltastene for å gjøre et valg"
+      "selection_help": "trykk på mellomromstasten og deretter på piltastene for å gjøre et valg",
+      "unit_price_separator": "per",
+      "error": "Feil"
     },
     "meta": {
       "tags": "Tagget «{{ tags }}»",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Prøv et annet søkeord eller gå tilbake til <a href=\"\/\">hjemmesiden<\/a>.",
+      "no_results_html": "Prøv et annet søkeord eller gå tilbake til <a href=\"{{ link }}\">hjemmesiden<\/a>.",
       "empty_search_message": "Søkefeltet kan ikke være tomt",
       "results_with_count": {
         "one": "{{ count }} resultat for «{{ terms }}»",
@@ -101,10 +103,10 @@
       "section_heading": "Steder"
     },
     "video": {
-      "play": "Spill av video",
-      "pause": "Sett videoen på pause",
-      "resume": "Fortsett videoen",
-      "close": "Lukk videoen"
+      "play": "Spill av {{ video_title }} video",
+      "pause": "Pause {{ video_title }} video",
+      "resume": "Fortsett {{ video_title }} video",
+      "close": "Lukk {{ video_title }} video"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Handlekurven din",
       "note": "Legg til et notat til bestillingen din",
+      "removed_item_html": "Fjernet <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> fra handlekurven din.",
       "remove": "Fjern",
       "subtotal": "Delsum",
       "savings": "Du sparer",
@@ -150,15 +153,31 @@
       "checkout": "Utsjekking",
       "empty": "Handlekurven din er tom.",
       "cookies_required": "Aktiver informasjonskapsler for å bruke handlekurven",
-      "edit": "Rediger",
-      "cancel": "Avbryt",
-      "continue_shopping": "Fortsette å handle"
+      "continue_shopping": "Fortsette å handle",
+      "cart_error": "Det oppstod en feil under oppdateringen av handlekurven din. Prøv på nytt."
     },
     "label": {
+      "discounted_total": "Rabattert totalsum",
       "product": "Produkt",
       "price": "Pris",
+      "price_column": "Se priskolonnen for detaljer om rabatten.",
+      "product_details": "Produktinformasjon",
       "quantity": "Antall",
-      "total": "Totalt"
+      "qty": "Antall",
+      "regular_total": "Vanlig totalsum",
+      "remove": "Fjern {{ product }}",
+      "total": "Totalt",
+      "update": "Oppdater"
+    },
+    "popup": {
+      "added_to_cart": "Ble akkurat lagt til handlekurven din",
+      "cart_count": {
+        "one": "{{ count }} gjenstand",
+        "other": "{{ count }} gjenstander"
+      },
+      "product_details": "Produktinformasjon",
+      "quantity": "Antall",
+      "quantity_label": "Mengde: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} produkter"
       },
       "collection_label": "Samling"
+    },
+    "catalog": {
+      "title": "Katalog"
     },
     "sorting": {
       "title": "Sorter etter"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Startside"
+    },
     "onboarding": {
       "product_title": "Navnet på produktet ditt",
       "product_description": "Dette området brukes til å beskrive produktets detaljer. Fortell kundene om hvordan produktet ser ut, føles og stilen. Legg til detaljer om farge, materialer brukt, størrelser og hvor det ble laget.",
@@ -337,11 +362,14 @@
       "sale_price": "Salgspris",
       "quantity": "Antall",
       "add_to_cart": "Legg i handlekurv",
+      "loader_label": "Legger til produkter i handlekurven",
       "back_to_collection": "Tilbake til {{ title }}",
       "vendor": "Selger",
       "quantity_minimum_message": "Antallet må være 1 eller mer",
       "include_taxes": "Avgift inkludert.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Frakt<\/a> beregnes ved kassen."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frakt<\/a> beregnes ved kassen.",
+      "unit_price_label": "Enhetspris",
+      "view_cart": "Vis handlekurv"
     }
   },
   "gift_cards": {

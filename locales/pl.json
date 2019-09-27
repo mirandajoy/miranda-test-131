@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Przejdź do treści",
-      "close_modal": "Zamknij (esc)",
+      "close_modal": "Zamknij",
       "link_messages": {
         "new_window": "Otwiera się w nowym oknie.",
         "external": "Otwiera zewnętrzną stronę internetową.",
         "new_window_and_external": "Otwiera zewnętrzną stronę internetową w nowym oknie."
       },
       "refresh_page": "zaznaczenie wyboru powoduje pełne odświeżenie strony",
-      "selection_help": "naciśnij klawisz spacji, a następnie klawisze strzałek, aby dokonać wyboru"
+      "selection_help": "naciśnij klawisz spacji, a następnie klawisze strzałek, aby dokonać wyboru",
+      "unit_price_separator": "za",
+      "error": "Błąd"
     },
     "meta": {
       "tags": "Oznaczone tagiem \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Spróbuj użyć innego szukanego słowa lub wróć do <a href=\"\/\">strony głównej<\/a>.",
+      "no_results_html": "Spróbuj użyć innego szukanego słowa lub wróć do <a href=\"{{ link }}\">strony głównej<\/a>.",
       "empty_search_message": "Pole wyszukiwania nie może być puste",
       "results_with_count": {
         "one": "{{ count }} wynik dla \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Lokalizacja"
     },
     "video": {
-      "play": "Odtwórz film",
-      "pause": "Zatrzymaj film",
-      "resume": "Wznów film",
-      "close": "Zamknij film"
+      "play": "Odtwórz film {{ video_title }}",
+      "pause": "Zatrzymaj film {{ video_title }}",
+      "resume": "Wznów film {{ video_title }}",
+      "close": "Zamknij film {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Twój koszyk",
       "note": "Dodaj notatkę do swojego zamówienia",
+      "removed_item_html": "Usunięto <span class=\"cart__removed-product-details\">{{ quantity }}<\/span>({{ quantity }}) z Twojego koszyka.",
       "remove": "Usuń",
       "subtotal": "Suma częściowa",
       "savings": "Oszczędzasz",
@@ -150,15 +153,31 @@
       "checkout": "Realizacja zakupu",
       "empty": "Twój koszyk jest obecnie pusty.",
       "cookies_required": "Włącz pliki cookie, aby korzystać z koszyka",
-      "edit": "Edytuj",
-      "cancel": "Anuluj",
-      "continue_shopping": "Kontynuuj zakupy"
+      "continue_shopping": "Kontynuuj zakupy",
+      "cart_error": "Wystąpił błąd podczas aktualizowania Twojego koszyka. Spróbuj ponownie."
     },
     "label": {
+      "discounted_total": "Łączny rabat",
       "product": "Produkt",
       "price": "Cena",
+      "price_column": "Szczegółowe informacje na temat rabatu można znaleźć w kolumnie Cena.",
+      "product_details": "Szczegóły produktu",
       "quantity": "Ilość",
-      "total": "Suma"
+      "qty": "Ilość",
+      "regular_total": "Suma regularna",
+      "remove": "Usuń {{ product }}",
+      "total": "Suma",
+      "update": "Aktualizuj"
+    },
+    "popup": {
+      "added_to_cart": "Dodano już do Twojego koszyka",
+      "cart_count": {
+        "one": "{{ count }} pozycja",
+        "other": "{{ count }} pozycji(-e)"
+      },
+      "product_details": "Szczegóły produktu",
+      "quantity": "Ilość",
+      "quantity_label": "Ilość: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "Liczba produktów: {{ count }}"
       },
       "collection_label": "Kolekcja"
+    },
+    "catalog": {
+      "title": "Katalog"
     },
     "sorting": {
       "title": "Sortuj wg"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Strona główna"
+    },
     "onboarding": {
       "product_title": "Nazwa Twojego produktu",
       "product_description": "Ten obszar służy do opisu szczegółów produktu. Powiedz klientom o wyglądzie i stylu Twojego produktu. Dodaj szczegóły dotyczące koloru, użytych materiałów, rozmiaru i miejscu produkcji.",
@@ -337,11 +362,14 @@
       "sale_price": "Cena sprzedaży",
       "quantity": "Ilość",
       "add_to_cart": "Dodaj do koszyka",
+      "loader_label": "Dodawanie produktu do koszyka",
       "back_to_collection": "Powrót do {{ title }}",
       "vendor": "Dostawca",
       "quantity_minimum_message": "Ilość musi wynosić 1 lub więcej",
       "include_taxes": "Z wliczonym podatkiem.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Koszt wysyłki<\/a> obliczony przy kasie."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Koszt wysyłki<\/a> obliczony przy kasie.",
+      "unit_price_label": "Cena jednostkowa",
+      "view_cart": "Zobacz koszyk"
     }
   },
   "gift_cards": {

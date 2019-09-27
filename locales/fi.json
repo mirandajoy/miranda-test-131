@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Ohita ja siirry sisältöön",
-      "close_modal": "Sulje (Esc)",
+      "close_modal": "Sulje",
       "link_messages": {
         "new_window": "Avaa uuden ikkunan.",
         "external": "Avaa ulkoisen verkkosivuston.",
         "new_window_and_external": "Avaa ulkoisen verkkosivuston uudessa ikkunassa."
       },
       "refresh_page": "vaihtoehdon valinta päivittää koko sivun",
-      "selection_help": "paina välilyöntinäppäintä ja tee sitten valinta nuolinäppäimillä"
+      "selection_help": "paina välilyöntinäppäintä ja tee sitten valinta nuolinäppäimillä",
+      "unit_price_separator": "kohti",
+      "error": "Virhe"
     },
     "meta": {
       "tags": "Merkitty tunnisteella \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Kokeile toista hakutermiä tai palaa <a href=\"\/\">aloitussivulle<\/a>.",
+      "no_results_html": "Kokeile toista hakutermiä tai palaa <a href=\"{{ link }}\">aloitussivulle<\/a>.",
       "empty_search_message": "Hakukenttä ei voi olla tyhjä",
       "results_with_count": {
         "one": "{{ count }} tulos haulla \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Sijainti"
     },
     "video": {
-      "play": "Toista video",
-      "pause": "Keskeytä video",
-      "resume": "Jatka videota",
-      "close": "Sulje video"
+      "play": "Toista video {{ video_title }}",
+      "pause": "Keskeytä video {{ video_title }}",
+      "resume": "Jatka videota {{ video_title }}",
+      "close": "Sulje video {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Ostoskorisi",
       "note": "Lisää huomautus tilaukseesi",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> on poistettu ostoskorista.",
       "remove": "Poista",
       "subtotal": "Välisumma",
       "savings": "Säästät",
@@ -150,15 +153,31 @@
       "checkout": "Maksu kassalle",
       "empty": "Ostoskorisi on tyhjä.",
       "cookies_required": "Ota evästeet käyttöön ostoskorin käyttämiseksi",
-      "edit": "Muokkaa",
-      "cancel": "Peruuta",
-      "continue_shopping": "Jatka ostoksia"
+      "continue_shopping": "Jatka ostoksia",
+      "cart_error": "Ostoskorisi päivityksessä tapahtui virhe. Yritä uudelleen."
     },
     "label": {
+      "discounted_total": "Alennettu kokonaissumma",
       "product": "Tuote",
       "price": "Hinta",
+      "price_column": "Alennustiedot näet hintasarakkeesta.",
+      "product_details": "Tuotteen tiedot",
       "quantity": "Määrä",
-      "total": "Yhteensä"
+      "qty": "Määrä",
+      "regular_total": "Normaali kokonaissumma",
+      "remove": "Poista {{ product }}",
+      "total": "Yhteensä",
+      "update": "Päivitä"
+    },
+    "popup": {
+      "added_to_cart": "Juuri lisätty ostoskoriisi",
+      "cart_count": {
+        "one": "{{ count }} tuote",
+        "other": "{{ count }} tuotteet"
+      },
+      "product_details": "Tuotteen tiedot",
+      "quantity": "Määrä",
+      "quantity_label": "Määrä: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} tuotteet"
       },
       "collection_label": "Kokoelma"
+    },
+    "catalog": {
+      "title": "Luettelo"
     },
     "sorting": {
       "title": "Lajittele:"
@@ -265,7 +287,7 @@
       "price": "Hinta",
       "quantity": "Määrä",
       "total": "Yhteensä",
-      "fulfilled_at_html": "Käsitelty {{ date }}",
+      "fulfilled_at_html": "Huolinta suoritettu {{ date }}",
       "subtotal": "Välisumma",
       "track_shipment": "Seuraa lähetystä"
     },
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Kotisivu"
+    },
     "onboarding": {
       "product_title": "Tuotteen nimi",
       "product_description": "Tällä alueella voit kuvata tuotteen tiedot. Kerro asiakkaille tuotteen ulkonäöstä, tuntumasta ja tyylistä. Lisää tiedot väristä, materiaaleista, mitoista ja valmistuspaikasta.",
@@ -337,11 +362,14 @@
       "sale_price": "Myyntihinta",
       "quantity": "Määrä",
       "add_to_cart": "Lisää ostoskoriin",
+      "loader_label": "Tuotteen lisääminen ostoskoriin",
       "back_to_collection": "Takaisin kohteeseen {{ title }}",
       "vendor": "Myyjä",
       "quantity_minimum_message": "Määrän on oltava vähintään 1",
       "include_taxes": "Sisältää veron.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Toimituskulut<\/a> lasketaan kassalla."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Toimituskulut<\/a> lasketaan kassalla.",
+      "unit_price_label": "Yksikköhinta",
+      "view_cart": "Katso ostoskori"
     }
   },
   "gift_cards": {

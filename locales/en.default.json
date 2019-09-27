@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Skip to content",
-      "close_modal": "Close (esc)",
+      "close_modal": "Close",
       "link_messages": {
         "new_window": "Opens in a new window.",
         "external": "Opens external website.",
         "new_window_and_external": "Opens external website in a new window."
       },
       "refresh_page": "choosing a selection results in a full page refresh",
-      "selection_help": "press the space key then arrow keys to make a selection"
+      "selection_help": "press the space key then arrow keys to make a selection",
+      "unit_price_separator": "per",
+      "error": "Error"
     },
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Please try a different search term or go back to the <a href=\"\/\">homepage<\/a>.",
+      "no_results_html": "Please try a different search term or go back to the <a href=\"{{ link }}\">homepage<\/a>.",
       "empty_search_message": "Search field cannot be empty",
       "results_with_count": {
         "one": "{{ count }} result for \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Location"
     },
     "video": {
-      "play": "Play video",
-      "pause": "Pause video",
-      "resume": "Resume video",
-      "close": "Close video"
+      "play": "Play {{ video_title }} video",
+      "pause": "Pause {{ video_title }} video",
+      "resume": "Resume {{ video_title }} video",
+      "close": "Close {{ video_title }} video"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Your cart",
       "note": "Add a note to your order",
+      "removed_item_html": "Removed <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> from your cart.",
       "remove": "Remove",
       "subtotal": "Subtotal",
       "savings": "You're saving",
@@ -150,15 +153,31 @@
       "checkout": "Check out",
       "empty": "Your cart is currently empty.",
       "cookies_required": "Enable cookies to use the shopping cart",
-      "edit": "Edit",
-      "cancel": "Cancel",
-      "continue_shopping": "Continue shopping"
+      "continue_shopping": "Continue shopping",
+      "cart_error": "There was an error while updating your cart. Please try again."
     },
     "label": {
+      "discounted_total": "Discounted total",
       "product": "Product",
       "price": "Price",
+      "price_column": "See Price column for discount details.",
+      "product_details": "Product details",
       "quantity": "Quantity",
-      "total": "Total"
+      "qty": "Qty",
+      "regular_total": "Regular total",
+      "remove": "Remove {{ product }}",
+      "total": "Total",
+      "update": "Update"
+    },
+    "popup": {
+      "added_to_cart": "Just added to your cart",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      },
+      "product_details": "Product details",
+      "quantity": "Qty",
+      "quantity_label": "Quantity: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} products"
       },
       "collection_label": "Collection"
+    },
+    "catalog": {
+      "title": "Catalog"
     },
     "sorting": {
       "title": "Sort by"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Homepage"
+    },
     "onboarding": {
       "product_title": "Your product's name",
       "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
@@ -337,11 +362,14 @@
       "sale_price": "Sale price",
       "quantity": "Quantity",
       "add_to_cart": "Add to cart",
+      "loader_label": "Adding product to your cart",
       "back_to_collection": "Back to {{ title }}",
       "vendor": "Vendor",
       "quantity_minimum_message": "Quantity must be 1 or more",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "unit_price_label": "Unit price",
+      "view_cart": "View cart"
     }
   },
   "gift_cards": {

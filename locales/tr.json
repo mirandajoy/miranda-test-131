@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "İçeriğe atla",
-      "close_modal": "Kapat (esc)",
+      "close_modal": "Kapat",
       "link_messages": {
         "new_window": "Yeni bir pencerede açılır.",
         "external": "Harici web sitesini açar.",
         "new_window_and_external": "Harici web sitesini yeni bir pencerede açar."
       },
       "refresh_page": "bir seçim yapmanız sayfanın tamamının yenilenmesine neden olur",
-      "selection_help": "seçim yapmak için boşluk tuşuna ve ardından ok tuşlarına basın"
+      "selection_help": "seçim yapmak için boşluk tuşuna ve ardından ok tuşlarına basın",
+      "unit_price_separator": "\/",
+      "error": "Hata"
     },
     "meta": {
       "tags": "\"{{ tags }}\" etiketlendi",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Lütfen farklı bir arama terimi deneyin veya <a href=\"\/\">ana sayfaya<\/a> geri dönün.",
+      "no_results_html": "Lütfen farklı bir arama terimi deneyin veya <a href=\"{{ link }}\">ana sayfaya<\/a> geri dönün.",
       "empty_search_message": "Arama alanı boş olamaz",
       "results_with_count": {
         "one": "\"{{ terms }}\" için {{ count }} sonuç",
@@ -101,10 +103,10 @@
       "section_heading": "Konum"
     },
     "video": {
-      "play": "Videoyu oynat",
-      "pause": "Videoyu duraklat",
-      "resume": "Videoyu sürdür",
-      "close": "Videoyu kapat"
+      "play": "{{ video_title }} videosunu oynatın",
+      "pause": "{{ video_title }} videosunu duraklatın",
+      "resume": "{{ video_title }} videosunu sürdürün",
+      "close": "{{ video_title }} videosunu kapatın"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Sepetiniz",
       "note": "Siparişinize not ekleyin",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> sepetinizden çıkarıldı.",
       "remove": "Kaldır",
       "subtotal": "Alt toplam",
       "savings": "Tasarruf ediyorsunuz",
@@ -150,15 +153,31 @@
       "checkout": "Ödeme",
       "empty": "Sepetiniz şu anda boş.",
       "cookies_required": "Alışveriş sepetini kullanmak için çerezleri etkinleştirin",
-      "edit": "Düzenle",
-      "cancel": "İptal",
-      "continue_shopping": "Alışverişe devam et"
+      "continue_shopping": "Alışverişe devam et",
+      "cart_error": "Sepetiniz güncellenirken bir hata oluştu. Lütfen tekrar deneyin."
     },
     "label": {
+      "discounted_total": "İndirimli toplam",
       "product": "Ürün",
       "price": "Fiyat",
+      "price_column": "İndirim ayrıntıları için Fiyat sütununa bakın.",
+      "product_details": "Ürün ayrıntıları",
       "quantity": "Adet",
-      "total": "Toplam"
+      "qty": "Adet",
+      "regular_total": "Normal toplam",
+      "remove": "{{ product }} ürününü kaldır",
+      "total": "Toplam",
+      "update": "Güncelle"
+    },
+    "popup": {
+      "added_to_cart": "Az önce sepetinize eklendi",
+      "cart_count": {
+        "one": "{{ count }} ürün",
+        "other": "{{ count }} ürün"
+      },
+      "product_details": "Ürün ayrıntıları",
+      "quantity": "Adet",
+      "quantity_label": "Adet: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} ürün"
       },
       "collection_label": "Koleksiyon"
+    },
+    "catalog": {
+      "title": "Katalog"
     },
     "sorting": {
       "title": "Sıralama ölçütü:"
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Ana sayfa"
+    },
     "onboarding": {
       "product_title": "Ürününüzün adı",
       "product_description": "Bu alan, ürününüze ilişkin ayrıntıların açıklanması için kullanılır. Müşterilere ürününüzün görünümü ve stili hakkında bilgi verin. Renk, kullanılan malzeme, boyut ve imalat yeri hakkında ayrıntılar ekleyin.",
@@ -337,11 +362,14 @@
       "sale_price": "Satış fiyatı",
       "quantity": "Adet",
       "add_to_cart": "Sepete ekle",
+      "loader_label": "Ürün, sepetinize ekleniyor",
       "back_to_collection": "Geri dön: {{ title }}",
       "vendor": "Satıcı",
       "quantity_minimum_message": "Adet 1 veya daha fazla olmalıdır",
       "include_taxes": "Vergi dahildir.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Kargo<\/a>, ödeme sayfasında hesaplanır."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Kargo<\/a>, ödeme sayfasında hesaplanır.",
+      "unit_price_label": "Birim fiyatı",
+      "view_cart": "Sepeti görüntüle"
     }
   },
   "gift_cards": {

@@ -3,7 +3,7 @@
 <div class="page-width text-center">
   <header class="section-header">
     <h1>{{ 'customer.addresses.title' | t }}</h1>
-    <p><a href="/account">{{ 'customer.account.return' | t }}</a></p>
+    <p><a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a></p>
     <p>
       <button type="button" class="btn address-new-toggle" id="AddressNewButton" aria-expanded="false" aria-owns="AddressNewForm">{{ 'customer.addresses.add_new' | t }}</button>
     </p>
@@ -109,7 +109,7 @@
                   <button
                     type="button"
                     class="btn btn--secondary btn--small address-delete"
-                    data-target="/account/addresses/{{ address.id }}"
+                    data-target="{{ address.url }}"
                     data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
                   >
                     {{ 'customer.addresses.delete' | t }}

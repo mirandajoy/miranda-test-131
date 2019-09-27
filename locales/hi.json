@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "सामग्री को छोड़ें",
-      "close_modal": "बंद करें (esc)",
+      "close_modal": "बंद करे",
       "link_messages": {
         "new_window": "नए विंडो में खोलें.",
         "external": "बाहरी वेबसाइट खोलें.",
         "new_window_and_external": "बाहरी वेबसाइट को एक नई विंडो में खोलें."
       },
       "refresh_page": "चयन का चुनाव करने से पूरा पेज रीफ़्रेश हो जाएगा",
-      "selection_help": "चयन करने के लिए स्पेस कुंजी दबाएं, फिर ऐरो कुंजी दबाएं"
+      "selection_help": "चयन करने के लिए स्पेस कुंजी दबाएं, फिर ऐरो कुंजी दबाएं",
+      "unit_price_separator": "प्रति",
+      "error": "त्रुटि"
     },
     "meta": {
       "tags": "\"{{ tags }}\" टैग किया गया",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "कृपया कोई दूसरा खोज शब्द आज़माएं या <a href=\"\/\">होमपेज<\/a> पर वापस जाएं.",
+      "no_results_html": "कृपया कोई दूसरा खोज शब्द आज़माएं या <a href=\"{{ link }}\">होमपेज<\/a> पर वापस जाएं.",
       "empty_search_message": "खोज फ़ील्ड खाली नहीं हो सकती है",
       "results_with_count": {
         "one": "\"{{ terms }}\" के लिए {{ count }} परिणाम",
@@ -101,10 +103,10 @@
       "section_heading": "स्थान"
     },
     "video": {
-      "play": "वीडियो चलाएं",
-      "pause": "वीडियो रोकें",
-      "resume": "वीडियो फिर से शुरू करें",
-      "close": "वीडियो बंद करें"
+      "play": "{{ video_title }} वीडियो चलाएं",
+      "pause": "{{ video_title }} वीडियो रोकें",
+      "resume": "{{ video_title }} वीडियो फिर से शुरू करें",
+      "close": "{{ video_title }} वीडियो बंद करें"
     }
   },
   "blogs": {
@@ -139,7 +141,8 @@
     "general": {
       "title": "आपका कार्ट",
       "note": "अपने ऑर्डर में एक नोट जोड़ें",
-      "remove": "हटाएं",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> अपनी कार्ट से निकाल दिया.",
+      "remove": "निकालें",
       "subtotal": "कुल",
       "savings": "आप सहेज रहे है",
       "taxes_and_shipping_at_checkout": "चेकआउट के दौरान कर और शिपिंग गणना की गई",
@@ -150,15 +153,31 @@
       "checkout": "चेक आउट करें",
       "empty": "आपका कार्ट वर्तमान में रिक्त है.",
       "cookies_required": "शॉपिंग कार्ट का उपयोग करने के लिए कुकीज़ सक्षम करें",
-      "edit": "संपादित करें",
-      "cancel": "रद्द करें",
-      "continue_shopping": "शॉपिंग जारी रखें"
+      "continue_shopping": "शॉपिंग जारी रखें",
+      "cart_error": "आपका कार्ट अपडेट करते समय कोई त्रुटि हुई थी. कृपया फिर से कोशिश करें."
     },
     "label": {
+      "discounted_total": "कुल छूट",
       "product": "उत्पाद",
       "price": "कीमत",
+      "price_column": "डिस्काउंट विवरण के लिए कीमत कॉलम देखें.",
+      "product_details": "उत्पाद विवरण",
       "quantity": "मात्रा",
-      "total": "कुल"
+      "qty": "मात्रा",
+      "regular_total": "सामान्य कुल",
+      "remove": "{{ product }} को निकालें",
+      "total": "कुल",
+      "update": "अपडेट"
+    },
+    "popup": {
+      "added_to_cart": "अभी आपके कार्ट में जोड़ा गया",
+      "cart_count": {
+        "one": "{{ count }} आइटम",
+        "other": "{{ count }} आइटम"
+      },
+      "product_details": "उत्पाद विवरण",
+      "quantity": "मात्रा",
+      "quantity_label": "मात्रा: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -172,11 +191,14 @@
       },
       "collection_label": "कलेक्शन"
     },
+    "catalog": {
+      "title": "कैटलॉग"
+    },
     "sorting": {
       "title": "द्वारा क्रमबद्ध करें"
     },
     "filters": {
-      "title_tags": "इस द्वारा फिल्टर करें",
+      "title_tags": "इस द्वारा फ़िल्टर करें",
       "all_tags": "सभी उत्पाद"
     }
   },
@@ -226,7 +248,7 @@
       "update": "पता अपडेट करें",
       "cancel": "रद्द करें",
       "edit": "संपादित करें",
-      "delete": "हटाएँ",
+      "delete": "हटाएं",
       "delete_confirm": "क्या आप वाकई इस पते को हटाना चाहते हैं?"
     },
     "login": {
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "होमपेज"
+    },
     "onboarding": {
       "product_title": "अपने उत्पाद का नाम",
       "product_description": "इस क्षेत्र का उपयोग आपके उत्पाद की जानकारी का वर्णन करने के लिए किया जाता है. अपने ग्राहकों के अपने उत्पाद के लुक, फील और स्टाइल के बारे में बताएं. रंग, उपयोग की गई सामग्री, आकार और जिस स्थान पर बनाया गया उसकी जानकारी जोड़ें.",
@@ -337,11 +362,14 @@
       "sale_price": "सेल की कीमत",
       "quantity": "मात्रा",
       "add_to_cart": "कार्ट में जोड़ें",
+      "loader_label": "अपने कार्ट में उत्पाद जोड़ना",
       "back_to_collection": "{{ title }} पर वापस जाएं",
       "vendor": "विक्रेता",
       "quantity_minimum_message": "मात्रा 1 या इससे अधिक होनी चाहिए",
       "include_taxes": "कर शामिल है.",
-      "shipping_policy_html": "चेकआउट के दौरान <a href=\"{{ link }}\">शिपिंग<\/a> की गणना की गई"
+      "shipping_policy_html": "चेकआउट के दौरान <a href=\"{{ link }}\">शिपिंग<\/a> की गणना की गई",
+      "unit_price_label": "यूनिट मूल्य",
+      "view_cart": "कार्ट देखें"
     }
   },
   "gift_cards": {

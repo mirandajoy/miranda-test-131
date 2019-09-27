@@ -2,17 +2,19 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Gå til indhold",
-      "close_modal": "Luk (esc)",
+      "close_modal": "Luk",
       "link_messages": {
         "new_window": "Åbner i nyt vindue.",
         "external": "Åbner eksternt website.",
         "new_window_and_external": "Åbner eksternt website i nyt vindue."
       },
       "refresh_page": "når du vælger en samling bliver hele siden genindlæst",
-      "selection_help": "tryk på mellemrumstasten og derefter på piletasterne for at vælge"
+      "selection_help": "tryk på mellemrumstasten og derefter på piletasterne for at vælge",
+      "unit_price_separator": "pr.",
+      "error": "Fejl"
     },
     "meta": {
-      "tags": "Mærket \"{{ tags }}\"",
+      "tags": "Tagget med \"{{ tags }}\"",
       "page": "Side {{ page }}"
     },
     "404": {
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Prøv et andet søgeord eller gå tilbage til <a href=\"\/\">startsiden<\/a>.",
+      "no_results_html": "Prøv et andet søgeord eller gå tilbage til <a href=\"{{ link }}\">startsiden<\/a>.",
       "empty_search_message": "Søgefeltet kan ikke være tomt",
       "results_with_count": {
         "one": "{{ count }} resultat for \"{{ terms }}\"",
@@ -98,13 +100,13 @@
       "address_no_results": "Ingen resultater for den adresse",
       "address_query_limit_html": "Du har overskredet Googles API-brugerbegrænsning. Overvej at opgradere til et <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium-abonnement<\/a>.",
       "auth_error_html": "Der opstod et problem under forsøg på at bekræfte din Google Maps-konto.",
-      "section_heading": "Beliggenhed"
+      "section_heading": "Lokation"
     },
     "video": {
-      "play": "Afspil video",
-      "pause": "Sæt video på pause",
-      "resume": "Genoptag afspilning af video",
-      "close": "Luk video"
+      "play": "Afspil videoen {{ video_title }}",
+      "pause": "Sæt videoen {{ video_title }} på pause",
+      "resume": "Genoptag afspilning af videoen {{ video_title }}",
+      "close": "Luk videoen {{ video_title }}"
     }
   },
   "blogs": {
@@ -117,7 +119,7 @@
       "read_more": "Læs mere",
       "read_more_title": "Læs mere: {{ title }}",
       "back_to_blog": "Tilbage til {{ title }}",
-      "tags": "Mærker"
+      "tags": "Tags"
     },
     "comments": {
       "title": "Indsend en kommentar",
@@ -138,27 +140,44 @@
   "cart": {
     "general": {
       "title": "Din indkøbskurv",
-      "note": "Tilføj en notat til din bestilling",
+      "note": "Føj en bemærkning til din ordre",
+      "removed_item_html": "Der blev fjernet <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> fra din indkøbskurv.",
       "remove": "Fjern",
       "subtotal": "Subtotal",
       "savings": "Du sparer",
-      "taxes_and_shipping_at_checkout": "Moms og levering bliver beregnet ved kassen",
-      "taxes_and_shipping_policy_at_checkout_html": "Moms og <a href=\"{{ link }}\">levering<\/a> bliver beregnet ved kassen",
-      "taxes_included_but_shipping_at_checkout": "Inklusive moms. Levering bliver beregnet ved kassen",
-      "taxes_included_and_shipping_policy_html": "Inklusive moms. <a href=\"{{ link }}\">Levering<\/a> bliver beregnet ved kassen",
+      "taxes_and_shipping_at_checkout": "Skatter og levering beregnes ved betaling",
+      "taxes_and_shipping_policy_at_checkout_html": "Skatter og <a href=\"{{ link }}\">levering<\/a> beregnes ved betaling",
+      "taxes_included_but_shipping_at_checkout": "Inklusive skat. Levering beregnes ved betaling",
+      "taxes_included_and_shipping_policy_html": "Inklusive skat. <a href=\"{{ link }}\">Levering<\/a> beregnes ved betaling.",
       "update": "Opdatér",
-      "checkout": "Til kassen",
+      "checkout": "Gå til betaling",
       "empty": "Din indkøbskurv er tom.",
       "cookies_required": "Du skal aktivere cookies for at kunne bruge indkøbskurven",
-      "edit": "Rediger",
-      "cancel": "Annullér",
-      "continue_shopping": "Tilbage til butikken"
+      "continue_shopping": "Tilbage til butikken",
+      "cart_error": "Der opstod en fejl under opdatering af din indkøbskurv. Prøv igen."
     },
     "label": {
+      "discounted_total": "Samled pris med rabat",
       "product": "Produkt",
       "price": "Pris",
+      "price_column": "Se kolonnen Pris for at få flere oplysninger om rabatten.",
+      "product_details": "Produktdetaljer",
       "quantity": "Antal",
-      "total": "I alt"
+      "qty": "Antal",
+      "regular_total": "Samlet normalpris",
+      "remove": "Fjern {{ product }}",
+      "total": "I alt",
+      "update": "Opdatér"
+    },
+    "popup": {
+      "added_to_cart": "Netop føjet til din indkøbskurv",
+      "cart_count": {
+        "one": "{{ count }} genstand",
+        "other": "{{ count }} genstande"
+      },
+      "product_details": "Produktdetaljer",
+      "quantity": "Antal",
+      "quantity_label": "Antal: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} produkter"
       },
       "collection_label": "Samling"
+    },
+    "catalog": {
+      "title": "Katalog"
     },
     "sorting": {
       "title": "Sortér efter"
@@ -244,7 +266,7 @@
       "order_number_link": "Ordrenummer {{ number }}",
       "date": "Dato",
       "payment_status": "Betalingsstatus",
-      "fulfillment_status": "Forsendelsesstatus",
+      "fulfillment_status": "Behandlingsstatus",
       "total": "I alt",
       "none": "Du har indnu ikke indgivet nogen ordrer."
     },
@@ -255,17 +277,17 @@
       "cancelled_reason": "Begrundelse: {{ reason }}",
       "billing_address": "Faktureringsadresse",
       "payment_status": "Betalingsstatus",
-      "shipping_address": "Forsendelsesadresse",
-      "fulfillment_status": "Forsendelsesstatus",
+      "shipping_address": "Leveringsadresse",
+      "fulfillment_status": "Behandlingsstatus",
       "discount": "Rabat",
-      "shipping": "Forsendelse",
+      "shipping": "Levering",
       "tax": "Moms",
       "product": "Produkt",
       "sku": "SKU",
       "price": "Pris",
       "quantity": "Antal",
       "total": "I alt",
-      "fulfilled_at_html": "Leveret den {{ date }}",
+      "fulfilled_at_html": "Behandlet den {{ date }}",
       "subtotal": "Subtotal",
       "track_shipment": "Følg forsendelse"
     },
@@ -290,10 +312,13 @@
       "last_name": "Efternavn",
       "email": "E-mail",
       "password": "Adgangskode",
-      "submit": "Lav"
+      "submit": "Opret"
     }
   },
   "homepage": {
+    "general": {
+      "title": "Startside"
+    },
     "onboarding": {
       "product_title": "Dit produkts navn",
       "product_description": "Dette område bruges til beskrivelse af dit produkts detaljer. Fortæl kunder hvordan dit produkt ser ud, føles og stil. Tilføj detaljer om farve, brugte materialer, størrelser og hvor det er fremstillet.",
@@ -337,11 +362,14 @@
       "sale_price": "Udsalgspris",
       "quantity": "Antal",
       "add_to_cart": "Læg i indkøbskurv",
+      "loader_label": "Lægger produkt i din indkøbskurv",
       "back_to_collection": "Tilbage til {{ title }}",
       "vendor": "Forhandler",
       "quantity_minimum_message": "Antal skal være 1 eller mere",
       "include_taxes": "Inklusive moms.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Levering<\/a> bliver beregnet ved kassen"
+      "shipping_policy_html": "<a href=\"{{ link }}\">Levering<\/a> beregnes ved betaling.",
+      "unit_price_label": "Pris pr. stk.",
+      "view_cart": "Se indkøbskurv"
     }
   },
   "gift_cards": {
@@ -352,7 +380,7 @@
       "disabled": "Slået fra",
       "expired": "Udløb den {{ expiry }}",
       "active": "Udløber den {{ expiry }}",
-      "redeem_html": "Brug denne kode ved kassen, til at indløse dit gavekort på {{ value }}",
+      "redeem_html": "Brug denne kode ved betaling til at indløse dit gavekort på {{ value }}",
       "shop_link": "Begynd at shoppe",
       "print": "Udskriv dette gavekort",
       "remaining_html": "{{ balance }} tilbage",

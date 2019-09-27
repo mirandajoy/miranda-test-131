@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "ข้ามไปที่เนื้อหา",
-      "close_modal": "ปิด (esc)",
+      "close_modal": "ปิด",
       "link_messages": {
         "new_window": "เปิดในหน้าต่างใหม่",
         "external": "เปิดเว็บไซต์ภายนอก",
         "new_window_and_external": "เปิดเว็บไซต์ภายนอกในหน้าต่างใหม่"
       },
       "refresh_page": "การเลือกตัวเลือกจะส่งผลให้มีการรีเฟรชทั้งหน้า",
-      "selection_help": "กดปุ่ม Space แล้วจึงกดปุ่มลูกศรเพื่อเลือก"
+      "selection_help": "กดปุ่ม Space แล้วจึงกดปุ่มลูกศรเพื่อเลือก",
+      "unit_price_separator": "ต่อ",
+      "error": "ผิดพลาด"
     },
     "meta": {
       "tags": "แท็กด้วย \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "โปรดลองใช้คำค้นหาอื่นหรือกลับไปที่<a href=\"\/\">หน้าหลัก<\/a>",
+      "no_results_html": "โปรดลองใช้คำค้นหาอื่นหรือกลับไปที่<a href=\"{{ link }}\">หน้าหลัก<\/a>",
       "empty_search_message": "ไม่สามารถเว้นว่างในช่องค้นหาได้",
       "results_with_count": {
         "one": "ผลลัพธ์ {{ count }} รายการสำหรับ \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "ตำแหน่งที่ตั้ง"
     },
     "video": {
-      "play": "เล่นวิดีโอ",
-      "pause": "หยุดวิดีโอชั่วคราว",
-      "resume": "รับชมวิดีโอต่อ",
-      "close": "ปิดวิดีโอ"
+      "play": "เล่นวิดีโอ {{ video_title }}",
+      "pause": "หยุดวิดีโอ {{ video_title }}",
+      "resume": "เล่นวิดีโอ {{ video_title }} ต่อ",
+      "close": "ปิดวิดีโอ {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "ตะกร้าสินค้าของคุณ",
       "note": "เพิ่มบันทึกไปยังคำสั่งซื้อของคุณ",
+      "removed_item_html": "ลบ <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> ออกจากตะกร้าของคุณแล้ว",
       "remove": "ลบออก",
       "subtotal": "ยอดรวมย่อย",
       "savings": "คุณจะประหยัด",
@@ -150,15 +153,31 @@
       "checkout": "การชำระเงิน",
       "empty": "ตะกร้าของคุณว่างอยู่ในขณะนี้",
       "cookies_required": "เปิดใช้คุกกี้เพื่อใช้ตะกร้าสินค้า",
-      "edit": "แก้ไข",
-      "cancel": "ยกเลิก",
-      "continue_shopping": "เลือกซื้อต่อ"
+      "continue_shopping": "เลือกซื้อต่อ",
+      "cart_error": "เกิดข้อผิดพลาดระหว่างการอัปเดตตะกร้าสินค้าของคุณ โปรดลองอีกครั้ง"
     },
     "label": {
+      "discounted_total": "ยอดรวมที่ใช้ส่วนลดแล้ว",
       "product": "สินค้า",
       "price": "ราคา",
+      "price_column": "ดูที่คอลัมน์ราคาสำหรับรายละเอียดของส่วนลด",
+      "product_details": "รายละเอียดสินค้า",
       "quantity": "จำนวน",
-      "total": "ยอดรวม"
+      "qty": "จำนวน",
+      "regular_total": "ยอดรวมปกติ",
+      "remove": "ลบ {{ product }} ออก",
+      "total": "ยอดรวม",
+      "update": "อัพเดต"
+    },
+    "popup": {
+      "added_to_cart": "เพิ่มลงในตะกร้าเมื่อไม่นานมานี้",
+      "cart_count": {
+        "one": "{{ count }} รายการ",
+        "other": "{{ count }} รายการ"
+      },
+      "product_details": "รายละเอียดสินค้า",
+      "quantity": "จำนวน",
+      "quantity_label": "ปริมาณ: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "สินค้า {{ count }} รายการ"
       },
       "collection_label": "คอลเลกชัน"
+    },
+    "catalog": {
+      "title": "แค็ตตาล็อก"
     },
     "sorting": {
       "title": "เรียงตาม"
@@ -244,7 +266,7 @@
       "order_number_link": "คำสั่งซื้อหมายเลข {{ number }}",
       "date": "วันที่",
       "payment_status": "สถานะการชำระเงิน",
-      "fulfillment_status": "สถานะการจัดการสินค้าแบบครบวงจร",
+      "fulfillment_status": "สถานะการจัดส่งสินค้าแบบครบวงจร",
       "total": "ยอดรวม",
       "none": "คุณยังไม่ได้ดำเนินการสั่งซื้อใดๆ เลย"
     },
@@ -256,7 +278,7 @@
       "billing_address": "ที่อยู่สำหรับการเรียกเก็บเงิน",
       "payment_status": "สถานะการชำระเงิน",
       "shipping_address": "ที่อยู่สำหรับจัดส่ง",
-      "fulfillment_status": "สถานะการจัดการสินค้าแบบครบวงจร",
+      "fulfillment_status": "สถานะการจัดส่งสินค้าแบบครบวงจร",
       "discount": "ส่วนลด",
       "shipping": "การจัดส่ง",
       "tax": "ภาษี",
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "หน้าแรก"
+    },
     "onboarding": {
       "product_title": "ชื่อสินค้าของคุณ",
       "product_description": "พื้นที่ตรงนี้มีไว้เพื่ออธิบายรายละเอียดสินค้าของคุณ บอกลูกค้าทราบว่าสินค้าของคุณมีรูปลักษณ์ ให้ความรู้สึกและมีสไตล์อย่างไร เพิ่มรายละเอียดเรื่องสี วัสดุที่ใช้ ขนาดและสถานที่ผลิต",
@@ -337,11 +362,14 @@
       "sale_price": "ราคาขาย",
       "quantity": "จำนวน",
       "add_to_cart": "เพิ่มลงในตะกร้าสินค้า",
+      "loader_label": "กำลังเพิ่มสินค้าไปยังตะกร้าสินค้าของคุณ",
       "back_to_collection": "กลับไปยัง {{ title }}",
       "vendor": "ผู้ขาย",
       "quantity_minimum_message": "ปริมาณต้องมากกว่าหรือเท่ากับ 1",
       "include_taxes": "รวมภาษี",
-      "shipping_policy_html": "<a href=\"{{ link }}\">ค่าจัดส่ง<\/a>ที่คิดคำนวณในระหว่างขั้นตอนการชำระเงิน"
+      "shipping_policy_html": "<a href=\"{{ link }}\">ค่าจัดส่ง<\/a>ที่คิดคำนวณในระหว่างขั้นตอนการชำระเงิน",
+      "unit_price_label": "ราคาต่อหน่วย",
+      "view_cart": "ดูตะกร้าสินค้า"
     }
   },
   "gift_cards": {

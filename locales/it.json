@@ -9,7 +9,9 @@
         "new_window_and_external": "Apre un sito esterno in una nuova finestra."
       },
       "refresh_page": "scegliendo una selezione si ottiene un aggiornamento completo della pagina",
-      "selection_help": "premi la barra spaziatrice e i tasti freccia per effettuare una selezione"
+      "selection_help": "premi la barra spaziatrice e i tasti freccia per effettuare una selezione",
+      "unit_price_separator": "per",
+      "error": "Errore"
     },
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Prova un termine di ricerca diverso o torna alla <a href=\"\/\">homepage<\/a>.",
+      "no_results_html": "Prova un termine di ricerca diverso o torna alla <a href=\"{{ link }}\">homepage<\/a>.",
       "empty_search_message": "Il campo di ricerca non può essere vuoto",
       "results_with_count": {
         "one": "{{ count }} risultato per \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Posizione"
     },
     "video": {
-      "play": "Play video",
-      "pause": "Metti video in pausa",
-      "resume": "Riprendi video",
-      "close": "Chiudi il video"
+      "play": "Riproduci il video {{ video_title }}",
+      "pause": "Metti in pausa il video {{ video_title }}",
+      "resume": "Riprendi il video {{ video_title }}",
+      "close": "Chiudi il video {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Il tuo carrello",
       "note": "Aggiungi una nota al tuo ordine",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> sono stati rimossi dal carrello.",
       "remove": "Rimuovi",
       "subtotal": "Totale parziale",
       "savings": "Stai risparmiando",
@@ -150,15 +153,31 @@
       "checkout": "Check-out",
       "empty": "Il tuo carrello è attualmente vuoto.",
       "cookies_required": "Abilita i cookie per utilizzare il carrello",
-      "edit": "Modifica",
-      "cancel": "Annulla",
-      "continue_shopping": "Continua lo shopping"
+      "continue_shopping": "Continua lo shopping",
+      "cart_error": "Si è verificato un errore durante l'aggiornamento del carrello. Riprova più tardi."
     },
     "label": {
+      "discounted_total": "Totale scontato",
       "product": "Prodotto",
       "price": "Prezzo",
+      "price_column": "Vedi la colonna Prezzo per i dettagli dello sconto.",
+      "product_details": "Dettagli prodotto",
       "quantity": "Quantità",
-      "total": "Totale"
+      "qty": "Quantità",
+      "regular_total": "Totale di listino",
+      "remove": "Rimuovi {{ product }}",
+      "total": "Totale",
+      "update": "Aggiornamento"
+    },
+    "popup": {
+      "added_to_cart": "Appena aggiunto al carrello",
+      "cart_count": {
+        "one": "{{ count }} articolo",
+        "other": "{{ count }} articoli"
+      },
+      "product_details": "Dettagli prodotto",
+      "quantity": "Quantità",
+      "quantity_label": "Quantità: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} prodotti"
       },
       "collection_label": "Collezione"
+    },
+    "catalog": {
+      "title": "Catalogo"
     },
     "sorting": {
       "title": "Ordina per"
@@ -208,7 +230,7 @@
     },
     "addresses": {
       "title": "I tuoi indirizzi",
-      "default": "Default",
+      "default": "Predefinito",
       "add_new": "Aggiungi un nuovo indirizzo",
       "edit_address": "Modifica indirizzo",
       "first_name": "Nome",
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Homepage"
+    },
     "onboarding": {
       "product_title": "Nome del tuo prodotto",
       "product_description": "Quest’area è per descrivere i dettagli del tuo prodotto. Qui puoi descrivere l'aspetto, il look e lo stile del prodotto ai tuoi clienti. Aggiungi dettagli sul colore, sui materiali utilizzati, sulle misure e su dove è stato creato.",
@@ -337,11 +362,14 @@
       "sale_price": "Prezzo scontato",
       "quantity": "Quantità",
       "add_to_cart": "Aggiungi al carrello",
+      "loader_label": "Inserimento del prodotto nel carrello",
       "back_to_collection": "Torna a {{ title }}",
       "vendor": "Venditore",
       "quantity_minimum_message": "La quantità deve essere 1 o più",
       "include_taxes": "Imposte incluse.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Spedizione<\/a> calcolata al momento del pagamento."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Spedizione<\/a> calcolata al momento del pagamento.",
+      "unit_price_label": "Prezzo unitario",
+      "view_cart": "Visualizza carrello"
     }
   },
   "gift_cards": {

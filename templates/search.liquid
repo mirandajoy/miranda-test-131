@@ -13,7 +13,7 @@
   {% endif %}
       <div class="grid">
         <div class="grid__item medium-up--two-fifths medium-up--push-three-tenths">
-          <form action="/search" method="get" role="search" class="search">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search">
             <div aria-live="polite" class="form-message form-message--error search-result-error-message hide" data-search-error-message>
               <ul id="error-search-form">
                 <li>{{ 'general.search.empty_search_message' | t }}</li>
@@ -40,7 +40,7 @@
       {% if search.performed and search.results_count == 0 %}
         <hr class="hr--small hr--invisible" aria-hidden="true" />
         <div class="rte">
-          <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
+          <p>{{ 'general.search.no_results_html' | t: link: routes.root_url }}</p>
         </div>
       {% endif %}
   </div>

@@ -27,7 +27,7 @@
 
     <div class="list-view-item__price-column">
       {% if product.available %}
-        {% include 'product-price', variant: product %}
+        {% include 'product-price', variant: product.selected_or_first_available_variant %}
       {% endif %}
     </div>
   </div>

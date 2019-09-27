@@ -2,14 +2,16 @@
   "general": {
     "accessibility": {
       "skip_to_content": "Langkau ke kandungan",
-      "close_modal": "Tutup (esc)",
+      "close_modal": "Tutup",
       "link_messages": {
         "new_window": "Membuka dalam tetingkap baharu.",
         "external": "Membuka laman web luaran.",
         "new_window_and_external": "Membuka laman web luaran dalam tetingkap baharu."
       },
       "refresh_page": "memilih satu pilihan akan mengakibatkan segar semula halaman penuh",
-      "selection_help": "tekan kekunci ruang, kemudian kekunci anak panah untuk membuat pemilihan"
+      "selection_help": "tekan kekunci ruang, kemudian kekunci anak panah untuk membuat pemilihan",
+      "unit_price_separator": "per",
+      "error": "Ralat"
     },
     "meta": {
       "tags": "Tag \"{{ tags }}\"",
@@ -48,7 +50,7 @@
       }
     },
     "search": {
-      "no_results_html": "Sila cuba terma carian yang berbeza atau kembali ke <a href=\"\/\">halaman utama<\/a>.",
+      "no_results_html": "Sila cuba terma carian yang berbeza atau kembali ke <a href=\"{{ link }}\">halaman utama<\/a>.",
       "empty_search_message": "Medan carian tidak boleh kosong",
       "results_with_count": {
         "one": "{{ count }} menghasilkan \"{{ terms }}\"",
@@ -101,10 +103,10 @@
       "section_heading": "Lokasi"
     },
     "video": {
-      "play": "Mainkan video",
-      "pause": "Jeda video",
-      "resume": "Sambung semula video",
-      "close": "Tutup video"
+      "play": "Mainkan video {{ video_title }}",
+      "pause": "Jeda video {{ video_title }}",
+      "resume": "Sambungkan semula video {{ video_title }}",
+      "close": "Tutup video {{ video_title }}"
     }
   },
   "blogs": {
@@ -139,6 +141,7 @@
     "general": {
       "title": "Troli anda",
       "note": "Tambah nota kepada pesanan anda",
+      "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }} <\/span>dialih keluar dari troli anda.",
       "remove": "Alih keluar",
       "subtotal": "Subjumlah",
       "savings": "Anda jimat",
@@ -149,16 +152,32 @@
       "update": "Kemas kini",
       "checkout": "Daftar keluar",
       "empty": "Troli anda kosong pada masa ini.",
-      "cookies_required": "Dayakan kuki untuk menggunakan troli belanja",
-      "edit": "Edit",
-      "cancel": "Batalkan",
-      "continue_shopping": "Teruskan membeli-belah"
+      "cookies_required": "Dayakan kuki untuk menggunakan troli beli-belah",
+      "continue_shopping": "Teruskan membeli-belah",
+      "cart_error": "Terdapat ralat semasa mengemas kini troli anda Sila cuba lagi."
     },
     "label": {
+      "discounted_total": "Jumlah berdiskaun",
       "product": "Produk",
       "price": "Harga",
+      "price_column": "Lihat ruangan Harga untuk butiran diskaun.",
+      "product_details": "Butiran produk",
       "quantity": "Kuantiti",
-      "total": "Jumlah"
+      "qty": "Kuantiti",
+      "regular_total": "Jumlah biasa",
+      "remove": "Alih keluar {{ product }}",
+      "total": "Jumlah",
+      "update": "Kemas kini"
+    },
+    "popup": {
+      "added_to_cart": "Baharu ditambahkan ke troli anda",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} item"
+      },
+      "product_details": "Butiran produk",
+      "quantity": "Kuantiti",
+      "quantity_label": "Kuantiti: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -171,6 +190,9 @@
         "other": "{{ count }} produk"
       },
       "collection_label": "Koleksi"
+    },
+    "catalog": {
+      "title": "Katalog"
     },
     "sorting": {
       "title": "Isih mengikut"
@@ -270,7 +292,7 @@
       "track_shipment": "Jejak penghantaran"
     },
     "recover_password": {
-      "title": "Menetapkan semula password anda",
+      "title": "Menetapkan semula kata laluan anda",
       "email": "E-mel",
       "submit": "Kemukakan",
       "cancel": "Batalkan",
@@ -294,6 +316,9 @@
     }
   },
   "homepage": {
+    "general": {
+      "title": "Laman Utama"
+    },
     "onboarding": {
       "product_title": "Nama produk anda",
       "product_description": "Medan ini digunakan untuk menerangkan butiran produk anda. Beritahu pelanggan tentang rupa, rasa dan gaya produk anda. Tambah butiran tentang warna, bahan yang digunakan, saiz dan di mana ia dibuat.",
@@ -337,11 +362,14 @@
       "sale_price": "Harga jualan",
       "quantity": "Kuantiti",
       "add_to_cart": "Tambah ke troli",
+      "loader_label": "Menambah produk ke troli anda",
       "back_to_collection": "Kembali kepada {{ title }}",
       "vendor": "Vendor",
       "quantity_minimum_message": "Kuantiti mestilah 1 atau lebih",
       "include_taxes": "Termasuk cukai.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Penghantaran<\/a> dikira semasa daftar keluar."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Penghantaran<\/a> dikira semasa daftar keluar.",
+      "unit_price_label": "Harga seunit",
+      "view_cart": "Lihat troli"
     }
   },
   "gift_cards": {

@@ -8,9 +8,9 @@
         <label class="blog-filter__label select-label" for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
         <div class="select-group">
           <select id="BlogTagFilter" aria-describedby="a11y-refresh-page-message a11y-selection-message">
-            <option value="/blogs/{{ blog.handle }}">{{ 'blogs.article.all_topics' | t }}</option>
+            <option value="{{ blog.url }}">{{ 'blogs.article.all_topics' | t }}</option>
             {% for tag in blog.all_tags %}
-              <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
+              <option value="{{ blog.url }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
             {% endfor %}
           </select>
           {% include 'icon-chevron-down' %}
@@ -32,7 +32,7 @@
               {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
               {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-              {% include 'image-style' with image: article.image, small_style: true, width: 345, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+              {% include 'image-style' with image: article.image, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
               <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
                 <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
                   <img id="{{ img_id }}"
@@ -132,7 +132,7 @@
                   {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
                   {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-                  {% include 'image-style' with image: article.image, small_style: false, width: 905, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+                  {% include 'image-style' with image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
 
                   <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
                     <a href="{{ article.url }}" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" class="article__list-image-container">
@@ -208,14 +208,23 @@
 {% schema %}
 {
   "name": {
+    "da": "Blogsider",
     "de": "Blogseiten",
     "en": "Blog pages",
     "es": "Páginas del blog",
+    "fi": "Blogisivut",
     "fr": "Pages du blog",
+    "hi": "ब्लॉग पेज",
     "it": "Pagine del blog",
     "ja": "ブログページ",
+    "ko": "블로그 페이지",
+    "ms": "Halaman blog",
+    "nb": "Bloggsider",
     "nl": "Blogpagina's",
     "pt-BR": "Páginas do blog",
+    "pt-PT": "Páginas do blogue",
+    "sv": "Bloggsidor",
+    "th": "หน้าบล็อก",
     "zh-CN": "博客页面",
     "zh-TW": "部落格頁面"
   },
@@ -224,14 +233,23 @@
       "type": "select",
       "id": "layout",
       "label": {
+        "da": "Layout",
         "de": "Layout",
         "en": "Layout",
         "es": "Diseño",
+        "fi": "Asettelu",
         "fr": "Mise en page",
+        "hi": "लेआउट",
         "it": "Layout",
         "ja": "レイアウト",
+        "ko": "레이아웃",
+        "ms": "Susun atur",
+        "nb": "Oppsett",
         "nl": "Indeling",
         "pt-BR": "Layout",
+        "pt-PT": "Esquema",
+        "sv": "Layout",
+        "th": "เลย์เอาต์",
         "zh-CN": "布局",
         "zh-TW": "版面配置"
       },
@@ -240,14 +258,23 @@
         {
           "value": "grid",
           "label": {
+            "da": "Gitter",
             "de": "Raster",
             "en": "Grid",
             "es": "Cuadrícula",
+            "fi": "Ruudukko",
             "fr": "Grille",
+            "hi": "ग्रिड",
             "it": "Griglia",
             "ja": "グリッド",
+            "ko": "그리드",
+            "ms": "Grid",
+            "nb": "Rutenett",
             "nl": "Raster",
             "pt-BR": "Grade",
+            "pt-PT": "Grelha",
+            "sv": "Rutnät",
+            "th": "กริด",
             "zh-CN": "网格",
             "zh-TW": "網格"
           }
@@ -255,14 +282,23 @@
         {
           "value": "list",
           "label": {
+            "da": "Liste",
             "de": "Liste",
             "en": "List",
             "es": "Lista",
+            "fi": "Luettelo",
             "fr": "Liste",
+            "hi": "सूची",
             "it": "Elenco",
             "ja": "リスト",
+            "ko": "목록",
+            "ms": "Senarai",
+            "nb": "Liste",
             "nl": "Lijst",
             "pt-BR": "Lista",
+            "pt-PT": "Lista",
+            "sv": "Lista",
+            "th": "รายการ",
             "zh-CN": "列表",
             "zh-TW": "清單"
           }
@@ -273,14 +309,23 @@
       "type": "checkbox",
       "id": "blog_show_author",
       "label": {
+        "da": "Vis forfatter",
         "de": "Autor anzeigen",
         "en": "Show author",
         "es": "Mostrar autor",
+        "fi": "Näytä tekijä",
         "fr": "Afficher l'auteur",
+        "hi": "लेखक दिखाएं",
         "it": "Mostra autore",
         "ja": "執筆者を表示する",
+        "ko": "작성자 표시",
+        "ms": "Tunjukkan pengarang",
+        "nb": "Vis forfatter",
         "nl": "Auteur weergeven",
         "pt-BR": "Exibir autor(a)",
+        "pt-PT": "Mostrar autor",
+        "sv": "Visa författare",
+        "th": "แสดงผู้เขียน",
         "zh-CN": "显示作者",
         "zh-TW": "顯示作者"
       },
@@ -290,14 +335,23 @@
       "type": "checkbox",
       "id": "blog_show_date",
       "label": {
+        "da": "Vis dato",
         "de": "Datum anzeigen",
         "en": "Show date",
         "es": "Mostrar fecha",
+        "fi": "Näytä päivämäärä",
         "fr": "Afficher la date",
+        "hi": "दिनांक दिखाएं",
         "it": "Mostra data",
         "ja": "日付を表示する",
+        "ko": "날짜 표시",
+        "ms": "Tunjukkan tarikh",
+        "nb": "Vis dato",
         "nl": "Datum weergeven",
         "pt-BR": "Exibir data",
+        "pt-PT": "Mostrar data",
+        "sv": "Visa datum",
+        "th": "แสดงวันที่",
         "zh-CN": "显示日期",
         "zh-TW": "顯示日期"
       },
